@@ -1,17 +1,20 @@
 import streamlit as st
+import streamlit.components.v1 as components
+
 st.set_page_config(page_title="Griffith Timetable Master", page_icon="🔗")
 target_url = "https://griffix.streamlit.app"
-st.components.v1.html(
+
+components.html(
     f"""
-    <script type="text/javascript">
-        window.parent.location.href = "{target_url}";
+    <script>
+        window.top.location.href = "{target_url}";
     </script>
     """,
     height=0,
 )
 
 st.title("Redirecting...")
-st.write(f"We are moving you to our new site.")
+st.write("We are moving you to the new Griffix site.")
 
 st.markdown(
     f"""
