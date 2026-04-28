@@ -7,7 +7,7 @@ target_url = "https://griffix.streamlit.app"
 components.html(
     f"""
     <script>
-        window.top.location.href = "{target_url}";
+        window.parent.location.href = "{target_url}";
     </script>
     """,
     height=0,
